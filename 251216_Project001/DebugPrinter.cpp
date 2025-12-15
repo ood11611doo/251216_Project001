@@ -1,4 +1,4 @@
-// Copyright (c) 2025 by ood11611doo. All rights reserved.
+ï»¿// Copyright (c) 2025 by ood11611doo. All rights reserved.
 
 #include <iostream>
 #include <string>
@@ -10,22 +10,22 @@ using namespace std; // NOLINT
 void DebugPrinter::printErrorCode(EErrorCode code) {
   switch (code) {
     case EErrorCode::hpmpError:
-      cout << "HP¿Í MP´Â 50º¸´Ù Å« °ªÀ» Á¤ÇØ¾ß ÇÕ´Ï´Ù."
-           << "´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä." << endl;
+      cout << "HPì™€ MPëŠ” 50ë³´ë‹¤ í° ê°’ì„ ì •í•´ì•¼ í•©ë‹ˆë‹¤."
+           << "ë‹¤ì‹œ ìž…ë ¥í•´ ì£¼ì„¸ìš”." << endl;
     break;
     case EErrorCode::attackDefenceError:
-      cout << "°ø°Ý·Â°ú ¹æ¾î·ÂÀº 0À» ÃÊ°úÇÏ´Â °ªÀÌ ÀÔ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù."
-           << "´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä." << endl;
+      cout << "ê³µê²©ë ¥ê³¼ ë°©ì–´ë ¥ì€ 0ì„ ì´ˆê³¼í•˜ëŠ” ê°’ì´ ìž…ë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤."
+           << "ë‹¤ì‹œ ìž…ë ¥í•´ ì£¼ì„¸ìš”." << endl;
     break;
     case EErrorCode::attributesError:
-      cout << "Èû, ¹ÎÃ¸, Áö´ÉÀº 0À» ÃÊ°úÇÏ°í ÃÑ ÇÕÀÌ 10À» ³Ñ¾î°¡Áö ¾Ê¾Æ¾ß ÇÕ´Ï´Ù."
-           << "´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä." << endl;
+      cout << "íž˜, ë¯¼ì²©, ì§€ëŠ¥ì€ 0ì„ ì´ˆê³¼í•˜ê³  ì´ í•©ì´ 10ì„ ë„˜ì–´ê°€ì§€ ì•Šì•„ì•¼ í•©ë‹ˆë‹¤."
+           << "ë‹¤ì‹œ ìž…ë ¥í•´ ì£¼ì„¸ìš”." << endl;
     break;
     case EErrorCode::potionCountError:
-      cout << "* Æ÷¼ÇÀÌ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+      cout << "* í¬ì…˜ì´ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
       break;
     case EErrorCode::attributePointError:
-      cout << "* ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù." << endl;
+      cout << "* ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤." << endl;
       break;
     default:
       cout << "Unknown error code." << endl;
@@ -35,17 +35,17 @@ void DebugPrinter::printErrorCode(EErrorCode code) {
 void DebugPrinter::printInputCode(EInputCode code, int additionalArgs) {
   switch (code) {
     case EInputCode::hpmpInput:
-      cout << "HP¿Í MP¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ";
+      cout << "HPì™€ MPë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”: ";
     break;
     case EInputCode::attackDefenceInput:
-      cout << "°ø°Ý·Â°ú ¹æ¾î·ÂÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ";
+      cout << "ê³µê²©ë ¥ê³¼ ë°©ì–´ë ¥ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”: ";
     break;
     case EInputCode::attributesInput:
-      cout << "Èû, ¹ÎÃ¸, Áö´ÉÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ";
+      cout << "íž˜, ë¯¼ì²©, ì§€ëŠ¥ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”: ";
     break;
     case EInputCode::potionInput:
-      cout << "* Æ÷¼ÇÀÌ Áö±ÞµÇ¾ú½À´Ï´Ù. (HP, MP Æ÷¼Ç °¢ "
-           << to_string(additionalArgs) << "°³)" << endl;
+      cout << "* í¬ì…˜ì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤. (HP, MP í¬ì…˜ ê° "
+           << to_string(additionalArgs) << "ê°œ)" << endl;
     break;
     default:
       cout << "Unknown input code." << endl;
@@ -56,27 +56,27 @@ void DebugPrinter::printMessages(EMessages code, string additionalArgs) {
   switch (code) {
     case EMessages::selectionView:
       system("cls");
-      cout << "<½ºÅÈ °ü¸® ½Ã½ºÅÛ>" << endl;
+      cout << "<ìŠ¤íƒ¯ ê´€ë¦¬ ì‹œìŠ¤í…œ>" << endl;
       cout << "1. HP UP" << endl;
       cout << "2. MP UP" << endl;
-      cout << "3. °ø°Ý·Â UP" << endl;
-      cout << "4. ¹æ¾î·Â UP" << endl;
-      cout << "5. ´É·ÂÄ¡[Èû] UP" << endl;
-      cout << "6. ´É·ÂÄ¡[¹ÎÃ¸] UP" << endl;
-      cout << "7. ´É·ÂÄ¡[Áö´É] UP" << endl;
-      cout << "8. ÇöÀç ´É·ÂÄ¡" << endl;
+      cout << "3. ê³µê²©ë ¥ UP" << endl;
+      cout << "4. ë°©ì–´ë ¥ UP" << endl;
+      cout << "5. ëŠ¥ë ¥ì¹˜[íž˜] UP" << endl;
+      cout << "6. ëŠ¥ë ¥ì¹˜[ë¯¼ì²©] UP" << endl;
+      cout << "7. ëŠ¥ë ¥ì¹˜[ì§€ëŠ¥] UP" << endl;
+      cout << "8. í˜„ìž¬ ëŠ¥ë ¥ì¹˜" << endl;
       cout << "9. Level UP" << endl;
-      cout << "0. ³ª°¡±â" << endl;
+      cout << "0. ë‚˜ê°€ê¸°" << endl;
       break;
     case EMessages::selectNumber:
-      cout << "¹øÈ£¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä: ";
+      cout << "ë²ˆí˜¸ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”: ";
     break;
     case EMessages::levelUp:
-      cout << "* ·¹º§¾÷! ÇöÀç ·¹º§: " << additionalArgs << endl;
-      cout << "* HP/MP Æ÷¼ÇÀÌ Áö±ÞµË´Ï´Ù." << endl;
+      cout << "* ë ˆë²¨ì—…! í˜„ìž¬ ë ˆë²¨: " << additionalArgs << endl;
+      cout << "* HP/MP í¬ì…˜ì´ ì§€ê¸‰ë©ë‹ˆë‹¤." << endl;
     break;
     case EMessages::programEnd:
-      cout << "ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù." << endl;
+      cout << "í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
     break;
     default:
       cout << "Unknown message code." << endl;
@@ -87,55 +87,55 @@ void DebugPrinter::printStatEdit(EStatEdits code,
   Status* stats, int* potionHP, int* potionMP, int* attributePoint) {
   switch (code) {
     case EStatEdits::hpUpSuccess:
-      cout << "* HP°¡ 20 Áõ°¡µÇ¾ú½À´Ï´Ù. Æ÷¼ÇÀÌ 1°³ Â÷°¨µË´Ï´Ù." << endl;
-      cout << "* ³²Àº Æ÷¼Ç ¼ö: " << to_string(*potionHP) << endl;
+      cout << "* HPê°€ 20 ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤. í¬ì…˜ì´ 1ê°œ ì°¨ê°ë©ë‹ˆë‹¤." << endl;
+      cout << "* ë‚¨ì€ í¬ì…˜ ìˆ˜: " << to_string(*potionHP) << endl;
       break;
     case EStatEdits::mpUpSuccess:
-      cout << "* MP°¡ 20 Áõ°¡µÇ¾ú½À´Ï´Ù. Æ÷¼ÇÀÌ 1°³ Â÷°¨µË´Ï´Ù." << endl;
-      cout << "* ³²Àº Æ÷¼Ç ¼ö: " << to_string(*potionMP) << endl;
+      cout << "* MPê°€ 20 ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤. í¬ì…˜ì´ 1ê°œ ì°¨ê°ë©ë‹ˆë‹¤." << endl;
+      cout << "* ë‚¨ì€ í¬ì…˜ ìˆ˜: " << to_string(*potionMP) << endl;
       break;
     case EStatEdits::hpmpUpFailed:
-      cout << "* Æ÷¼ÇÀÌ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+      cout << "* í¬ì…˜ì´ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
       break;
     case EStatEdits::attackDouble:
-      cout << "* °ø°Ý·ÂÀÌ 2¹è·Î Áõ°¡µÇ¾ú½À´Ï´Ù." << endl;
-      cout << "* ÇöÀç °ø°Ý·Â: " << (*stats).displayAttack() << endl;
+      cout << "* ê³µê²©ë ¥ì´ 2ë°°ë¡œ ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
+      cout << "* í˜„ìž¬ ê³µê²©ë ¥: " << (*stats).displayAttack() << endl;
       break;
     case EStatEdits::defenceDouble:
-      cout << "* ¹æ¾î·ÂÀÌ 2¹è·Î Áõ°¡µÇ¾ú½À´Ï´Ù." << endl;
-      cout << "* ÇöÀç ¹æ¾î·Â: " << (*stats).displayDefence() << endl;
+      cout << "* ë°©ì–´ë ¥ì´ 2ë°°ë¡œ ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
+      cout << "* í˜„ìž¬ ë°©ì–´ë ¥: " << (*stats).displayDefence() << endl;
       break;
     case EStatEdits::strengthUpSuccess:
-      cout << "* ÈûÀÌ 1 Áõ°¡µÇ¾ú½À´Ï´Ù." << endl;
-      cout << "* ÇöÀç Èû: " << (*stats).displayStrength() << endl;
-      cout << "* ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ®: " << to_string(*attributePoint) << endl;
+      cout << "* íž˜ì´ 1 ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
+      cout << "* í˜„ìž¬ íž˜: " << (*stats).displayStrength() << endl;
+      cout << "* ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸: " << to_string(*attributePoint) << endl;
       break;
     case EStatEdits::agilityUpSuccess:
-      cout << "* ¹ÎÃ¸ÀÌ 1 Áõ°¡µÇ¾ú½À´Ï´Ù." << endl;
-      cout << "* ÇöÀç ¹ÎÃ¸: " << (*stats).displayAgility() << endl;
-      cout << "* ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ®: " << to_string(*attributePoint) << endl;
+      cout << "* ë¯¼ì²©ì´ 1 ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
+      cout << "* í˜„ìž¬ ë¯¼ì²©: " << (*stats).displayAgility() << endl;
+      cout << "* ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸: " << to_string(*attributePoint) << endl;
       break;
     case EStatEdits::intelligenceUpSuccess:
-      cout << "* Áö´ÉÀÌ 1 Áõ°¡µÇ¾ú½À´Ï´Ù." << endl;
-      cout << "* ÇöÀç Áö´É: " << (*stats).displayIntelligence() << endl;
-      cout << "* ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ®: " << to_string(*attributePoint) << endl;
+      cout << "* ì§€ëŠ¥ì´ 1 ì¦ê°€ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
+      cout << "* í˜„ìž¬ ì§€ëŠ¥: " << (*stats).displayIntelligence() << endl;
+      cout << "* ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸: " << to_string(*attributePoint) << endl;
       break;
     case EStatEdits::attributeUpFailed:
-      cout << "* ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù." << endl;
+      cout << "* ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤." << endl;
       break;
     case EStatEdits::justDisplayStats:
-      cout << "* ·¹º§ : " << (*stats).displayLevel() << endl;
+      cout << "* ë ˆë²¨ : " << (*stats).displayLevel() << endl;
       cout << "* HP : " << (*stats).displayHP()
            << ", MP : " << (*stats).displayMP()
-           << ", °ø°Ý·Â : " << (*stats).displayAttack()
-           << ", ¹æ¾î·Â : " << (*stats).displayDefence()
-           << ", Èû : " << (*stats).displayStrength()
-           << ", ¹ÎÃ¸ : " << (*stats).displayAgility()
-           << ", Áö´É : " << (*stats).displayIntelligence()
+           << ", ê³µê²©ë ¥ : " << (*stats).displayAttack()
+           << ", ë°©ì–´ë ¥ : " << (*stats).displayDefence()
+           << ", íž˜ : " << (*stats).displayStrength()
+           << ", ë¯¼ì²© : " << (*stats).displayAgility()
+           << ", ì§€ëŠ¥ : " << (*stats).displayIntelligence()
            << endl;
-      cout << "* ³²Àº HP Æ÷¼Ç : " << to_string(*potionHP)
-           << ", ³²Àº MP Æ÷¼Ç : " << to_string(*potionMP)
-           << ", ³²Àº ´É·ÂÄ¡ Æ÷ÀÎÆ® : " << to_string(*attributePoint)
+      cout << "* ë‚¨ì€ HP í¬ì…˜ : " << to_string(*potionHP)
+           << ", ë‚¨ì€ MP í¬ì…˜ : " << to_string(*potionMP)
+           << ", ë‚¨ì€ ëŠ¥ë ¥ì¹˜ í¬ì¸íŠ¸ : " << to_string(*attributePoint)
            << endl;
       break;
     default:
