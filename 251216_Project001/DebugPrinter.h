@@ -7,22 +7,76 @@
 
 using namespace std; // NOLINT
 
+enum class EErrorCode {
+  defaultError = 0,
+  hpmpError = 1,
+  attackDefenceError = 2,
+  attributesError = 3,
+  potionCountError = 4,
+  attributePointError = 5
+};
+enum class EInputCode {
+  defaultCode = 0,
+  hpmpInput = 1,
+  attackDefenceInput = 2,
+  attributesInput = 3,
+  potionInput = 4
+};
+enum class EMessages {
+  defaultCode = 0,
+  selectionView = 1,
+  selectNumber = 2,
+  levelUp = 3,
+  programEnd = 4
+};
+enum class EStatEdits {
+  defaultCode = 0,
+  hpUpSuccess = 1,
+  mpUpSuccess = 2,
+  hpmpUpFailed = 3,
+  attackDouble = 4,
+  defenceDouble = 5,
+  strengthUpSuccess = 6,
+  agilityUpSuccess = 7,
+  intelligenceUpSuccess = 8,
+  attributeUpFailed = 9,
+  justDisplayStats = 10
+};
+
 class DebugPrinter {
  public:
-  static void printErrorCode(int code);
-  static void printInputHPMP();
-  static void printInputAttackDefence();
-  static void printInputAttributes();
-  static void printPotionGiveaway(int potionAmount);
-  static void printMain();
-  static void printSelection();
-  static void printLevelUp(string newLevel);
-  static void printHPMPUp(
-    bool isSuccess, bool isHP, int potionTarget, Status stats);
-  static void printAttackDefenceDouble(bool isAttack, Status stats);
-  static void printAttributeIncrease(
-    bool isSuccess, int attributeIndex, int attributePoint, Status stats);
-  static void printOverallState(
-    Status stats, int potionHP, int potionMP, int attributePoint);
-  static void printProgramEnd();
+  /**
+   * @brief Logs a specific error code for debugging purposes.
+   * @param code = Enum for what errors to print out.
+   * @return void
+   */
+  static void printErrorCode(EErrorCode code);
+
+  /**
+   * @brief Logs a starting stat input related messages.
+   * @param code = Enum for what input types to print out.
+   * @param additionalArgs = Additional argument for input message (if needed).
+   * @return void
+   */
+  static void printInputCode(EInputCode code, int additionalArgs = -1);
+
+  /**
+   * @brief Logs various messages during the program execution.
+   * @param code = Enum for what messages to print out.
+   * @param additionalArgs = Additional argument for message (if needed).
+   * @return void
+   */
+  static void printMessages(EMessages code, string additionalArgs = "");
+
+  /**
+   * @brief Logs the result of stat edits and current status.
+   * @param code = Enum for what stat edit result to print out.
+   * @param stats = Pointer to Status object to get current stats.
+   * @param potionHP = Pointer to current HP potion count.
+   * @param potionMP = Pointer to current MP potion count.
+   * @param attributePoint = Pointer to current attribute points.
+   * @return void
+   */
+  static void printStatEdit(EStatEdits code,
+    Status* stats, int* potionHP, int* potionMP, int* attributePoint);
 };
